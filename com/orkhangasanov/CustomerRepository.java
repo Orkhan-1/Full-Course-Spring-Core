@@ -1,8 +1,11 @@
 package com.orkhangasanov;
 
-public class CustomerRepository {
+import org.springframework.stereotype.Repository;
 
-    void saveCustomer(String name) {
+@Repository
+public class CustomerRepository {
+    public void saveCustomer(String name) {
         System.out.println("Saving customer: " + name);
     }
 }
+
