@@ -1,8 +1,11 @@
 package com.orkhangasanov;
 
 public class CustomerService {
+    private CustomerRepository repo;
 
-    private CustomerRepository repo = new CustomerRepository(); // tightly coupled
+    public void setRepo(CustomerRepository repo) {
+        this.repo = repo;
+    }
 
     public void registerCustomer(String name) {
         repo.saveCustomer(name);
