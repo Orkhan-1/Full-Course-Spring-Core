@@ -4,8 +4,7 @@
           http://www.springframework.org/schema/beans
           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="repo" class="com.orkhangasanov.CustomerRepository" />
-    <bean id="service" class="com.orkhangasanov.CustomerService">
-        <constructor-arg ref="repo"/>
-    </bean>
+    <bean id="repoSingleton" class="com.orkhangasanov.CustomerRepository" scope="singleton"/>
+    <bean id="repoPrototype" class="com.orkhangasanov.CustomerRepository" scope="prototype"/>
+
 </beans>
