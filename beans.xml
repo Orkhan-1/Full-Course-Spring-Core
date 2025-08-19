@@ -6,6 +6,6 @@
 
     <bean id="repo" class="com.orkhangasanov.CustomerRepository" />
     <bean id="service" class="com.orkhangasanov.CustomerService">
-        <property name="repo" ref="repo" />
+        <constructor-arg ref="repo"/>
     </bean>
 </beans>
