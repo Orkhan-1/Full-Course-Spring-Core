@@ -1,9 +1,9 @@
 package com.orkhangasanov;
 
 public class CustomerService {
-    private final CustomerRepository repo;
+    private CustomerRepository repo;
 
-    public CustomerService(CustomerRepository repo) {
+    public void setRepo(CustomerRepository repo) {
         this.repo = repo;
     }
 
