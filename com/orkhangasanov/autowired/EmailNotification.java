@@ -1,6 +1,6 @@
 package com.orkhangasanov.autowired;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service

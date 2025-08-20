@@ -1,4 +1,5 @@
 import com.orkhangasanov.autowired.NotificationService;
+import com.orkhangasanov.autowired.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -8,7 +9,7 @@ public class SpringApp {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext("com.orkhangasanov");
 
-        NotificationService service = context.getBean(NotificationService.class);
-        service.send("Hello, Spring!");
+        UserService service = context.getBean(UserService.class);
+        service.register("Orkhan Gasanov");
     }
 }
