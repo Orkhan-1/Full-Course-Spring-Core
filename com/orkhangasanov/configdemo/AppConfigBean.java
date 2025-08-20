@@ -9,34 +9,44 @@ import org.springframework.stereotype.Component;
 public class AppConfigBean {
 
     @Value("${app.name}")
-    private String name;
+    private String appName;
+
     @Value("${app.version}")
-    private String version;
+    private String appVersion;
+
     @Value("${app.support.email}")
     private String supportEmail;
 
-    public String getName() {
-        return name;
-    }
+    @Value("${database.url}")
+    private String databaseUrl;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    @Value("${database.username}")
+    private String databaseUsername;
 
-    public String getVersion() {
-        return version;
-    }
+    @Value("${server.port}")
+    private int serverPort;
 
-    public void setVersion(String version) {
-        this.version = version;
-    }
+    @Value("${logging.level.com.orkhangasanov}")
+    private String loggingLevel;
+    
+    public String getAppName() { return appName; }
+    public String getAppVersion() { return appVersion; }
+    public String getSupportEmail() { return supportEmail; }
+    public String getDatabaseUrl() { return databaseUrl; }
+    public String getDatabaseUsername() { return databaseUsername; }
+    public int getServerPort() { return serverPort; }
+    public String getLoggingLevel() { return loggingLevel; }
 
-    public String getSupportEmail() {
-        return supportEmail;
-    }
-
-    public void setSupportEmail(String supportEmail) {
-        this.supportEmail = supportEmail;
+    public void displayConfig() {
+        System.out.println("=== Application Configuration ===");
+        System.out.println("App Name: " + appName);
+        System.out.println("Version: " + appVersion);
+        System.out.println("Support Email: " + supportEmail);
+        System.out.println("Database URL: " + databaseUrl);
+        System.out.println("Database User: " + databaseUsername);
+        System.out.println("Server Port: " + serverPort);
+        System.out.println("Logging Level: " + loggingLevel);
+        System.out.println("=================================");
     }
 
 }
