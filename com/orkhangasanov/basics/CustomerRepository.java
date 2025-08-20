@@ -1,4 +1,4 @@
-package com.orkhangasanov;
+package com.orkhangasanov.basics;
 
 import org.springframework.stereotype.Repository;
 

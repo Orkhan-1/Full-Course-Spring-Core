@@ -1,15 +1,13 @@
-import com.orkhangasanov.autowired.NotificationService;
-import com.orkhangasanov.autowired.UserService;
-import org.springframework.context.ApplicationContext;
+import com.orkhangasanov.beanlifecycle.DemoBean;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class SpringApp {
     public static void main(String[] args) {
 
-        ApplicationContext context =
+        ConfigurableApplicationContext context =
                 new AnnotationConfigApplicationContext("com.orkhangasanov");
-
-        UserService service = context.getBean(UserService.class);
-        service.register("Orkhan Gasanov");
+        DemoBean bean = context.getBean(DemoBean.class);
+        context.close();
     }
 }

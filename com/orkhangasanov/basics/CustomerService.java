@@ -1,4 +1,4 @@
-package com.orkhangasanov;
+package com.orkhangasanov.basics;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

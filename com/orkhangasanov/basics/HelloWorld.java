@@ -1,4 +1,4 @@
-package com.orkhangasanov;
+package com.orkhangasanov.basics;
 
 public class HelloWorld {
     private String message;
