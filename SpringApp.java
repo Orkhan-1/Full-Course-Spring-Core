@@ -1,4 +1,5 @@
 import com.orkhangasanov.autowired.UserService;
+import com.orkhangasanov.basics.CustomerService;
 import com.orkhangasanov.configdemo.AppConfigBean;
 import com.orkhangasanov.configdemo.AppConfigFile;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +16,7 @@ public class SpringApp {
         // export SPRING_PROFILES_ACTIVE=prod
 
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfigFile.class);
-        AppConfigBean config = context.getBean(AppConfigBean.class);
-        config.displayConfig();
+        CustomerService customerService = context.getBean(CustomerService.class);
+        customerService.registerCustomer("Orkhan Gasanov");
     }
 }

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 @Profile("dev")
 public class SMSNotification implements NotificationService {
     public void send(String message) {
-        System.out.println("Sending SMS: " + message);
+        System.out.println("Sending SMS (dev): " + message);
     }
 }

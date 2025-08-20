@@ -1,18 +1,25 @@
 package com.orkhangasanov.basics;
 
+import com.orkhangasanov.autowired.NotificationService;
+import com.orkhangasanov.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerService {
 
-    @Autowired
     private CustomerRepository repo;
+    private final NotificationService notifier;
 
-    public CustomerService(CustomerRepository repo) {
+    @Autowired
+    public CustomerService(CustomerRepository repo, NotificationService notifier) {
+        this.repo = repo;
+        this.notifier = notifier;
     }
 
     public void registerCustomer(String name) {
-        repo.saveCustomer(name);
+        Customer customer = new Customer(name);
+        repo.saveCustomer(customer);
+        notifier.send("Welcome " + name);
     }
 }

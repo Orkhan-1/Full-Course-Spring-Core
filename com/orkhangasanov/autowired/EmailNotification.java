@@ -7,6 +7,6 @@ import org.springframework.stereotype.Service;
 @Profile("prod")
 public class EmailNotification implements NotificationService {
     public void send(String message) {
-        System.out.println("Sending EMAIL: " + message);
+        System.out.println("Sending EMAIL (prod): " + message);
     }
 }
