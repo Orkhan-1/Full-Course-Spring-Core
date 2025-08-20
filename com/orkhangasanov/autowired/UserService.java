@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    @Qualifier("emailNotification")
     private NotificationService notificationService;
 
     public void register(String name) {
