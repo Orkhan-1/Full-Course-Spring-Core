@@ -1,4 +1,4 @@
-import com.orkhangasanov.configdemo.AppConfigBean;
+import com.orkhangasanov.autowired.UserService;
 import com.orkhangasanov.configdemo.AppConfigFile;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -8,7 +8,7 @@ public class SpringApp {
 
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfigFile.class);
-        AppConfigBean config = context.getBean(AppConfigBean.class);
-        System.out.println(config.getName() + " v " + config.getVersion());
+        UserService config = context.getBean(UserService.class);
+        config.register("Orkhan Gasanov");
     }
 }
