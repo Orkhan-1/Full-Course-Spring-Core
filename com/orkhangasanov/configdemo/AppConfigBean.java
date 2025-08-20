@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @PropertySource("classpath:application.properties")
-public class AppConfig {
+public class AppConfigBean {
 
     @Value("${app.name}")
     private String name;
