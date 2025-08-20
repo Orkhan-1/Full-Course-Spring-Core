@@ -1,6 +1,4 @@
-import com.orkhangasanov.autowired.UserService;
 import com.orkhangasanov.basics.CustomerService;
-import com.orkhangasanov.configdemo.AppConfigBean;
 import com.orkhangasanov.configdemo.AppConfigFile;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
