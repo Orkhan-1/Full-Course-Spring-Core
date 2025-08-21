@@ -1,4 +1,4 @@
-package com.orkhangasanov.basics;
+package com.orkhangasanov.dao;
 
 import com.orkhangasanov.entity.Customer;
 import org.springframework.stereotype.Repository;

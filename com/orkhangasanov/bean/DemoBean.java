@@ -1,8 +1,8 @@
-package com.orkhangasanov.beanlifecycle;
+package com.orkhangasanov.bean;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.stereotype.Component;
+
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 

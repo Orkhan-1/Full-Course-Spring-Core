@@ -1,6 +1,6 @@
-package com.orkhangasanov.basics;
+package com.orkhangasanov.service;
 
-import com.orkhangasanov.autowired.NotificationService;
+import com.orkhangasanov.dao.CustomerRepository;
 import com.orkhangasanov.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

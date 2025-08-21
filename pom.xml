@@ -9,6 +9,13 @@
     <artifactId>full-spring-course</artifactId>
     <version>1.0.0</version>
 
+    <properties>
+        <java.version>11</java.version>
+        <spring.version>5.3.30</spring.version>
+        <servlet.version>4.0.1</servlet.version>
+        <jackson.version>2.15.2</jackson.version>
+    </properties>
+
     <dependencies>
         <!-- Valid Spring Dependency (Example) -->
         <dependency>
@@ -16,11 +23,46 @@
             <artifactId>spring-context</artifactId>
             <version>5.3.36</version>
         </dependency>
+
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
             <version>1.3.2</version>
         </dependency>
+
+        <!-- Spring MVC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- Servlet API -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Jackson for JSON -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+            <version>9.0.76</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <version>9.0.76</version>
+        </dependency>
+
 
     </dependencies>
 </project>
